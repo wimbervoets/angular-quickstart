@@ -1,15 +1,26 @@
 <h1>
   {{title}}
 </h1>
-
+<!--
   <uib-tabset active="activeJustified" justified="true">
-    <uib-tab index="0" heading="Currencies">
-<ul>
-  <li *ngFor="let currency of currencies">{{currency.code}}</li>
-</ul>
+    <uib-tab index="0" heading="Currencies">-->
+
+      <table>
+        <tr>
+          <th>Code</th>
+          <th>Rate</th>
+        </tr>
+        <tr *ngFor="let currency of currencies">
+          <td>{{currency.code}}</td>
+          <td>{{currency.rate}}</td>
+        </tr>
+      </table>
+
+<!--
     </uib-tab>
     <uib-tab index="1" heading="Categories">display categories here</uib-tab>
     <uib-tab index="2" heading="Persons">display persons here</uib-tab>
   </uib-tabset>
 
 
+-->

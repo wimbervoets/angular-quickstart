@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
       .subscribe(
         data => {
           this.currencies = data;
-          // this.currencies.push(data);
+          this.currencies.push(data);
         },
         err => console.log("Can't get currencies. Error code: %s, URL: %s", err.status, err.url),
         () => console.log("Currencies are retrieved")

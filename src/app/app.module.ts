@@ -12,8 +12,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
-    Ng2BootstrapModule
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
