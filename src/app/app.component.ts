@@ -8,7 +8,6 @@ import { CurrencyService, Currency} from "./currency.service";
 
 @Component({
   selector: 'app-root',
-  // template: '<h1>All Currencies</h1><ul><li *ngFor="let currency of currencies">{{currency.code}}</ul>',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   providers: [CurrencyService]
