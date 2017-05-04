@@ -31,35 +31,31 @@ export class CurrencyComponent implements OnInit {
           () => console.log("Currencies are retrieved")
         )
     }
+
+    addCurrency(currency) {
+      console.log("addCurrency")
+      // this.currencies.unshift(currency);
+    }
+
+    deleteCurrency(currency) {
+      console.log("deleteCurrency")
+      // let indexToDelete = this.currencies.indexOf(currency);
+      // if (indexToDelete !== -1) {
+      //   this.currencies.splice(indexToDelete,1);
+      // }
+    }
 }
 
 @Component({
   selector: 'currency-form',
-  template: `
-<div class="card card-block">
-  <h4 class="card-title">Create Currency</h4>
-  <div class="form-group">
-    <input type="text"
-           class="form-control"
-           placeholder="Enter the code"
-           #code>
-  </div>
-  <div class="form-group">
-    <input type="text"
-           class="form-control"
-           placeholder="Enter the rate"
-           #rate>
-  </div>
-  <button type="button"
-          class="btn btn-primary"
-          (click)="createCurrency(code.value, rate.value)">Create</button>
-</div>
-  `
+  templateUrl: './currencyForm.component.html' 
 })
 export class CurrencyFormComponent {
+
   @Output() currencyCreated = new EventEmitter<Currency>();
 
   createCurrency(code: string, rate: string) {
+    console.log("createCurrency(code=" + code + ", rate=" + rate + ")")
     this.currencyCreated.emit(new Currency(code, rate));
   }
 }

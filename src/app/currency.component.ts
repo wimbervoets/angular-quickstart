@@ -1,5 +1,5 @@
 
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { Currency, CurrencyService } from "app/currency.service";
 
 @Component({
@@ -12,7 +12,7 @@ import { Currency, CurrencyService } from "app/currency.service";
 })
 export class CurrencyComponent {
 
-    currency: Currency;
+    @Input() currency: Currency;
 
     constructor(currencyService: CurrencyService) {
         this.currency = currencyService.getCurrency();
