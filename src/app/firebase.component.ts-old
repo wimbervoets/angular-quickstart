@@ -1,0 +1,19 @@
+import {Component} from '@angular/core';
+import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
+
+@Component({
+  selector: 'firebasetest',
+  template: `
+  <ul>
+    <li *ngFor="let item of items | async">
+      {{ item.name }}
+    </li>
+  </ul>
+  `
+})
+export class MyApp {
+  items: FirebaseListObservable<any[]>;
+  constructor(db: AngularFireDatabase) {
+    this.items = db.list('/items');
+  }
+}
