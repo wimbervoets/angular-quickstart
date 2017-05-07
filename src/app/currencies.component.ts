@@ -8,7 +8,7 @@ import { Currency, CurrencyService } from "app/currency.service";
     templateUrl: './currencies.component.html',
     providers: [CurrencyService]
 })
-export class CurrencyComponent implements OnInit {
+export class CurrenciesOverviewComponent implements OnInit {
 
     currencies: Array<Currency> = [];
 
@@ -43,6 +43,10 @@ export class CurrencyComponent implements OnInit {
       // if (indexToDelete !== -1) {
       //   this.currencies.splice(indexToDelete,1);
       // }
+    }
+
+    toggle() {
+      console.log("------------>>>>>>toggle");
     }
 }
 

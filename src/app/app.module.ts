@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { CurrencyComponent, CurrencyFormComponent } from "app/currencies.component";
+import { CurrenciesOverviewComponent, CurrencyFormComponent } from "app/currencies.component";
 
 // import { AngularFireModule } from 'angularfire2';
 
@@ -24,7 +24,7 @@ import { CurrencyComponent, CurrencyFormComponent } from "app/currencies.compone
   declarations: [
     AppComponent,
     CurrencyFormComponent,
-    CurrencyComponent
+    CurrenciesOverviewComponent
   ],
   imports: [
     BrowserModule,
