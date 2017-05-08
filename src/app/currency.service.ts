@@ -20,4 +20,12 @@ export class Currency {
         this.code = code;
         this.rate = rate;
     }
+
+    public getCode(): string {
+        return this.code;
+    }
+
+    public getRate(): string {
+        return this.rate;
+    }
 }

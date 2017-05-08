@@ -32,8 +32,14 @@ export class CurrenciesOverviewComponent implements OnInit {
         )
     }
 
-    addCurrency(currency) {
+    addCurrency(currency: Currency) {
       console.log("addCurrency")
+      if (!currency.getCode()) {
+        console.log("no value for currency code")
+      }
+      if (!currency.getRate) {
+        console.log("no value for currency rate")
+      }
       // this.currencies.unshift(currency);
     }
 
