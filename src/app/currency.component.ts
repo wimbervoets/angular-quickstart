@@ -4,11 +4,8 @@ import { Currency, CurrencyService } from "app/currency.service";
 
 @Component({
     selector: "currency",
-    template: `<div class="card card-block">
-                    <h2>Code: {{currency.code}}</h2>
-                    <h2>Rate: {{currency.rate}}</h2>
-                <div>`,
-                providers: [CurrencyService]
+    templateUrl: './currency.component.html',
+    providers: [CurrencyService]
 })
 export class CurrencyComponent {
 
