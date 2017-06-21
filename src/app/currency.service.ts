@@ -1,10 +1,16 @@
-import { Injectable } from "@angular/core";
+import { Injectable, OnInit } from "@angular/core";
+import { Http } from "@angular/http";
 
 @Injectable()
 export class CurrencyService {
 
-    // getCurrencies() : {
-    // }
+    constructor(private http : Http) {
+
+    }
+
+    getCurrencies() {
+        return this.http.get("/api/v1.0/currencies").map(res => res.json());
+    }
 
     getCurrency(): Currency {
         return new Currency("USD", "1.123");
