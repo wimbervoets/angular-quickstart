@@ -2,8 +2,11 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-no-content',
-  templateUrl: './no-content.component.html',
-  styleUrls: ['./no-content.component.css']
+  template: `
+    <div>
+      <h1>404: page missing</h1>
+    </div>
+  `
 })
 export class NoContentComponent implements OnInit {
 
