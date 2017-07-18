@@ -1,6 +1,10 @@
-/*@import '~angular/material/prebuilt-themes/indigo-pink.css';*/
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 nav, main {
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+#currentSearch {
+    width: 70%;
 }
