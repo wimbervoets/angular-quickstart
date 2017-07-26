@@ -1,37 +1,21 @@
 
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-import {Observable} from 'rxjs/Observable';
-import { Component } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { Component, OnInit } from '@angular/core';
+
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  providers: []
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
-  // title = 'Currencies Overview';
+  constructor() {
+  }
 
-  // currencies: Array<Currency> = [];
-
-  // dataSource: Observable<Currency>;
-
-  // constructor(private http: Http, currencyService: CurrencyService) {
-  //   // this.dataSource = this.http.get("api/currencies").map(res => res.json());
-  // }
-
-  // ngOnInit() {
-  //   this.http.get("api/currencies")
-  //     .map(res => res.json())
-  //     .subscribe(
-  //       data => {
-  //         this.currencies = data;
-  //         this.currencies.push(data);
-  //       },
-  //       err => console.log("Can't get currencies. Error code: %s, URL: %s", err.status, err.url),
-  //       () => console.log("Currencies are retrieved")
-  //     )
-  // }
+  ngOnInit() {
+  }
 }
