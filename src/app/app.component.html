@@ -1,2 +1,32 @@
-<currencies-overview>
-</currencies-overview>
+<!--<div class="navigation-bar">
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a href="#">Currencies</a></li>
+        <li role="presentation"><a routerLink="categories" routerLinkActive="active">Categories</a></li>
+        <li role="presentation"><a routerLink="persons" routerLinkActive="active">Persons</a></li>
+    </ul>
+</div>-->
+
+
+<div>
+    <nav>
+      <ul class="nav nav-tabs">
+        <li role="presentation">
+          <a [routerLink]="['./currencies']" routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">Currencies</a>
+        </li>
+        <li role="presentation">
+          <a [routerLink]="['./categories']" routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">Categories</a>
+        </li>
+        <li role="presentation">
+          <a [routerLink]="['./persons']" routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">Persons</a>
+        </li>
+        <li role="presentation">
+          <a [routerLink]="['/about']" routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">About</a>
+        </li>
+      </ul>
+    </nav>
+</div>
+
+<main>
+  <router-outlet></router-outlet>
+  <router-outlet name="popup"></router-outlet>
+</main>
