@@ -16,6 +16,7 @@ import { TestComponent } from "app/test/test.component";
 
 export const appRoutes: Routes = [
     { path: '', redirectTo: 'currencies', pathMatch: 'full' },
+    { path: 'categories', component: CategoriesOverviewComponent },
     { path: 'persons', component: PersonsOverviewComponent },
     { path: 'about', component: AboutComponent },
     { path: 'test', component: TestComponent },
