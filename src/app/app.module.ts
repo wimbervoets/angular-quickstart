@@ -13,7 +13,7 @@ import { environment } from '../environments/environment';
 import * as firebase from 'firebase/app';
 
 import { AppComponent } from './app.component';
-import { CurrenciesOverviewComponent, CurrencyFormComponent } from "app/currency/currencies.component";
+import { CurrenciesOverviewComponent   } from "app/currency/currencies.component";
 import { SortPipe } from './sort.pipe';
 import { CurrencyDetailComponent } from 'app/currency/currency-detail.component';
 import { CurrencyPopupComponent, CurrencyDialogComponent } from 'app/currency/currency-dialog.component';
@@ -77,7 +77,7 @@ const APP_ROUTES = [
     AppComponent,
     NoContentComponent,
     AboutComponent,
-    TestComponent,
+    TestComponent
     // DialogExample
   ],
   imports: [
