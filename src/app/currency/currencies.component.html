@@ -1,0 +1,96 @@
+<div class="action-bar">
+	<!--<div [ngSwitch]="showDiv" >
+	  <div *ngSwitchCase="true">
+		<currency-form (currencyCreated)="createCurrency($event)"></currency-form>
+	  </div>
+      <div *ngSwitchDefault>-->
+          <!--<button type="button" class="btn btn-primary" aria-expanded="false" (click)="showDiv = !showDiv">Create New Currency</button>-->
+      <!--</div>
+    </div>-->
+
+
+    <!--#1 - <button class="btn btn-lg btn-outline-primary" (click)="openDialog()">Launch dialog</button><br/>-->
+    #2 - <button type="submit"
+                [routerLink]="['/', { outlets: { popup: 'currency-new'} }]"
+                replaceUrl="true" class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="hidden-md-down">New currencyyyy</span>
+                        </button>
+
+    <p>&nbsp;</p>
+    
+    <!--<ng-template ngbModalContainer></ng-template>-->
+    
+    <!--<ngbd-modal-basic></ngbd-modal-basic>-->
+</div>
+
+
+
+<div>
+    <h2>
+        <div>Currencies</div>
+        <button class="btn btn-primary float-right create-currency" [routerLink]="['/', { outlets: { popup: ['currency-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span class="hidden-sm-down">Create new Currency</span>
+        </button>
+    </h2>
+    <div class="row">
+        <div class="col-sm-12">
+            <form name="searchForm" class="form-inline">
+                <div class="input-group w-100 mt-3">
+                    <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="search">
+                    <button class="input-group-addon btn btn-info" (click)="search(currentSearch)">
+                        <span class="fa fa-search"></span>
+                    </button>
+                    <button class="input-group-addon btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                        <span class="fa fa-trash-o"></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br/>
+    <div class="currency-list" *ngIf="currencies">
+        <table class="table table-hover table-responsive table-striped">
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Rate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let currency of currencies">
+                    <td><a [routerLink]="['/currencies', currency.code ]">{{currency.code}}</a></td>
+                    <td>{{currency.rate}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                [routerLink]="['../currency', currency.id ]"
+                                    class="btn btn-info btn-sm">
+                                <span class="fa fa-eye"></span>
+                                <span class="hidden-md-down">View</span>
+                            </button>
+                            <button type="submit"
+                                    [routerLink]="['/', { outlets: { popup: 'currency/'+ currency.id + '/edit'} }]"
+                                    replaceUrl="true"
+                                    class="btn btn-primary btn-sm">
+                                <span class="fa fa-pencil"></span>
+                                <span class="hidden-md-down">Edit</span>
+                            </button>
+                            <button type="submit"
+                                    [routerLink]="['/', { outlets: { popup: 'currency/'+ currency.id + '/delete'} }]"
+                                    replaceUrl="true"
+                                    class="btn btn-danger btn-sm">
+                                <span class="fa fa-remove"></span>
+                                <span class="hidden-md-down">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
